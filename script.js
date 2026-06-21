@@ -1,6 +1,6 @@
 const readline = require("readline");
 
-// ===== UTILITIES =====
+// UTILITIES
 function randomItem(arr) {
   return arr[Math.floor(Math.random() * arr.length)];
 }
@@ -9,7 +9,7 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-// ===== TYPEWRITER EFFECT =====
+// TYPEWRITER EFFECT
 async function typeWriter(text, speed = 20) {
   for (let char of text) {
     process.stdout.write(char);
@@ -18,7 +18,7 @@ async function typeWriter(text, speed = 20) {
   console.log();
 }
 
-// ===== LOADING BAR =====
+// LOADING BAR
 async function loadingBar() {
   process.stdout.write("Initializing cosmic scanner ");
 
@@ -31,7 +31,7 @@ async function loadingBar() {
   console.log();
 }
 
-// ===== COLORS =====
+// COLORS
 const colors = {
   cyan: "\x1b[36m",
   green: "\x1b[32m",
@@ -41,7 +41,7 @@ const colors = {
   reset: "\x1b[0m"
 };
 
-// ===== ASCII ART =====
+// ASCII ART
 const ascii = [
 `
         ███████
@@ -70,7 +70,7 @@ const ascii = [
 `
 ];
 
-// ===== ORACLE DATABASE =====
+// ORACLE DATABASE
 const oracle = {
 
   role: [
@@ -116,7 +116,7 @@ const oracle = {
 
 };
 
-// ===== GENERATE READING =====
+// GENERATE READING
 function generateReading() {
 
   return {
@@ -130,13 +130,13 @@ function generateReading() {
 
 }
 
-// ===== TERMINAL SETUP =====
+// TERMINAL SETUP
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
 });
 
-// ===== MAIN PROGRAM =====
+// MAIN PROGRAM
 async function startOracle() {
 
   console.clear();
